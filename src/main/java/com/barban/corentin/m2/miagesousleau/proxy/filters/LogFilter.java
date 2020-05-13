@@ -6,9 +6,11 @@ import com.netflix.zuul.exception.ZuulException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.servlet.http.HttpServletRequest;
 
+@CrossOrigin
 @Component
 public class LogFilter extends ZuulFilter {
 
