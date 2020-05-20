@@ -11,4 +11,24 @@ ribbon:
   eureka:
     enabled: true
 zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+  routes:
+    gestionMembre:
+      path: /gestionmembre/**
+      url: http://localhost:8088  #verifier le port
+    gestionCours:
+      path: /gestioncours/**
+      url: http://localhost:8089
+    gestionComposite:
+      path: /miagesousleau/**
+      url: http://localhost:8090
+    oauth:
+      path: /oauth/**
+      url: http://localhost:9002/spring-security-oauth-server/oauth
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: 123
