@@ -13,6 +13,7 @@ ribbon:
 zuul:
   sensitiveHeaders: Cookie,Set-Cookie
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+
   routes:
     gestionMembre:
       path: /gestionmembre/**
