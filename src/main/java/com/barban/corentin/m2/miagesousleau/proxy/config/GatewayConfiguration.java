@@ -18,6 +18,10 @@ public class GatewayConfiguration extends ResourceServerConfigurerAdapter {
         http.cors().and().authorizeRequests()
                 .antMatchers("/oauth/**")
                 .permitAll()
+                .antMatchers("/**/swagger-ui-custom/html/**")
+                .permitAll()
+                .antMatchers("/**/api-docs")
+                .permitAll()
                 .antMatchers("/**")
                 .authenticated();
     }
